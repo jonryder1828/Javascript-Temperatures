@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<script>
+		
+			
+			
+			function fToC(){
+				var fahrenheit = document.getElementById("fahrenheit").value;
+				var celsius;
+				if(fahrenheit != ''){
+					celsius = (fahrenheit - 32) * 5/9;
+					document.getElementById("output").innerHTML = celsius;
+				}else{
+					document.getElementById("output").innerHTML = "Please enter a value!";
+				}
+			}
+            function cToF(){
+                var celcius = document.getElementById("celsius").value;
+                var fahrenheit;
+                if(celcius != ''){
+                    fahrenheit = celcius * 9 / 5 + 32;
+                    document.getElementById("output1").innerHTML = fahrenheit;
+                }else{
+                    document.getElementById("output1").innerHTML = "Please enter a value";
+                }
+            }
+		
+		</script>
+	</head>
+	<body>
+		<h2>Enter Fahrenheit</h2>
+		<input type="text" id="fahrenheit" />
+		<button onclick="fToC()" >Find Celsius</button>
+ 
+		<h4>Output: <span id="output"></span></h4>
+        
+        <h2>Enter Celcius</h2>
+        <input type="text" id="celsius" />
+        <button onclick="cToF()" >Find Fahrenheit</button>
+        
+        <h4>Output: <span id="output1"></span></h4>
+	</body>
+</html>
